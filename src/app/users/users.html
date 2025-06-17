@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row mt-5">
+    <h2>Users</h2>
+    <nav class="navbar my-5">
+      <div class="container">
+        <form class="d-flex w-100" role="search ">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    @for(user of users;track user){
+    <div class="col-lg-6">
+      <div class="card text-start mb-2 border-5 rounded-5">
+        <img
+          class="card-img-top rounded-circle user-image my-2 d-block mx-auto"
+          src="{{user.userImg}}"
+          alt="user-image"
+        />
+        <div class="card-body text-center">
+          <h4
+            [ngClass]="{
+              'red': user.roleChip === 'admin',
+              'yellow': user.roleChip === 'moderator',
+              'green': user.roleChip === 'user'
+            }"
+            class="card-title w-25 mx-auto"
+          >
+            {{user.userName}}
+          </h4>
+          <p class="card-text">{{user.email}}</p>
+          <p class="card-text">{{user.phone}}</p>
+          <p class="card-text">{{user.birthDate}}</p>
+          <p class="card-text">{{user.roleChip}}</p>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>

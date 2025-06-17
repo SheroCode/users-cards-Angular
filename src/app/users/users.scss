@@ -1,0 +1,21 @@
+.user-image {
+  width: 15rem;
+  height: 15rem;
+  border: solid 5px teal;
+  object-fit: cover;
+}
+.red {
+  background-color: rgb(226, 41, 41);
+  color: #ffff;
+}
+.green {
+  background-color: rgb(9, 152, 9);
+  color: #ffff;
+}
+.yellow {
+  background-color: rgb(240, 240, 55);
+}
+.card-text {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
