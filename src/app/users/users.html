@@ -19,24 +19,24 @@
       <div class="card text-start mb-2 border-5 rounded-5">
         <img
           class="card-img-top rounded-circle user-image my-2 d-block mx-auto"
-          src="{{user.userImg}}"
+          src="{{user.profilePicture}}"
           alt="user-image"
         />
         <div class="card-body text-center">
           <h4
             [ngClass]="{
-              'red': user.roleChip === 'admin',
-              'yellow': user.roleChip === 'moderator',
-              'green': user.roleChip === 'user'
+              'red': user.role === 'admin',
+              'yellow': user.role === 'moderate',
+              'green': user.role === 'user'
             }"
-            class="card-title w-25 mx-auto"
+            class="card-title w-50 mx-auto"
           >
-            {{user.userName}}
+            {{user.username}}
           </h4>
           <p class="card-text">{{user.email}}</p>
           <p class="card-text">{{user.phone}}</p>
-          <p class="card-text">{{user.birthDate}}</p>
-          <p class="card-text">{{user.roleChip}}</p>
+          <p class="card-text">{{user.birthdate}}</p>
+          <p class="card-text">{{user.role}}</p>
         </div>
       </div>
     </div>
