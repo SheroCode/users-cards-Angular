@@ -58,7 +58,7 @@ export class Users {
       role: 'user',
     },
     {
-      profilePicture: 'https://api.dicebear.com/7.x/avataaars/svg?seed=david',
+      profilePicture: 'assets/imgs/person1.jpg',
       username: 'davidhall',
       email: 'david.h@example.com',
       phone: '+1-555-7890',
